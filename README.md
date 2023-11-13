@@ -17,7 +17,7 @@ The `J2Test` framework makes it easy to write unit tests for Jinja2 macros in a 
 
 1a. Run the following command in your command line:
 ```bash
-pip3 install sfdc-j2test
+pip3 install j2test
 ```
 
 1b. Alternatively, install via Github
