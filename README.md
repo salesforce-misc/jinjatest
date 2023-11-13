@@ -1,4 +1,4 @@
-# JinaTest: Jinja2 Unit Test Framework
+# j2Test: Jinja2 Unit Test Framework
 
 ## Table of Contents
 - Background
@@ -9,9 +9,9 @@
 - License
 
 ## Background
-The `JinaTest` framework makes it easy to write unit tests for Jinja2 macros in a simple and scalable manner. It provides powerful features such as macro rendering, macro output assertions, custom Jinja filters, and a CLI tool for test automation.
+The `j2Test` framework makes it easy to write unit tests for Jinja2 macros in a simple and scalable manner. It provides powerful features such as macro rendering, macro output assertions, custom Jinja filters, and a CLI tool for test automation.
 
-`JinaTest` was developed to be able to build robust unit tests for Jinja macros by eliminating the overhead of importing, running, and testing Jinja macros.
+`j2Test` was developed to be able to build robust unit tests for Jinja macros by eliminating the overhead of importing, running, and testing Jinja macros.
 
 
 ## Installation
