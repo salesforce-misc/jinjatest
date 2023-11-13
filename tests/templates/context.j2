@@ -1,0 +1,77 @@
+
+
+{% macro get_request_meta(
+    vars,
+    types)
+%}
+    {#
+        Sample macro that collects all metadata related to current request.
+        :param vars: Template variables containing general request context
+        :type vars: dict
+        :return: Metadata related to current request.
+        :rtype: dict
+    #}
+
+    {# Sample of calling another macro on tests #}
+    {% set level = get_request_level(vars) | trim %}
+
+    {% set request_context = {
+            "level": level,
+            "case_types": types,
+            "region_name": vars.std.env.datacenter.region,
+            "datacenter_type": vars.std.env.datacenter.type
+        }
+    %}
+
+    {% if level == "SERVER" %}
+        {# set server specific metadata #}
+        {% do request_context.update(
+                {
+                    "server_name": vars.std.env.server
+                }
+            )
+        %}
+    {% endif %}
+
+
+    {% if level == "INSTANCE" %}
+        {# set instance specific metadata #}
+        {% do request_context.update(
+                {
+                    "instance_type": vars.std.env.instance_type,
+                    "instance_name": vars.std.env.instance
+                }
+            )
+        %}
+    {% endif %}
+
+    {# implicit return #}
+    {{ request_context | tojson }}
+
+{% endmacro %}
+
+
+{% macro get_request_level(
+    vars)
+%}
+    {#
+        Simple function to determine if request is for datacenter, server or instance
+        :param vars: Request context
+        :type vars: dict
+        :return: String for the level based on the request
+        :rtype: str
+    #}
+    {% set context = vars.std.env %}
+
+    {% set level = "DATACENTER" %}
+
+    {% if context.server != "NONE" %}
+        {% set level = "SERVER" %}
+    {% elif context.instance != "NONE" %}
+        {% set level = "INSTANCE" %}
+    {% endif %}
+
+    {# implicit return #}
+    {{ level }}
+
+{% endmacro %}

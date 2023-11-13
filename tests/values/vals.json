@@ -1,0 +1,10 @@
+[
+    {
+        "target": {
+            "name": "mock_target_name.json",
+            "key1": "value1",
+            "key2": "value2"
+        },
+        "additional_info1": "value3"
+    }
+]

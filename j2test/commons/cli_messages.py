@@ -1,0 +1,5 @@
+NO_TEST_FILE = "ERROR: The jinja unit test file {file} does not exist\n"
+INVALID_TEST_FILE = "ERROR: Jinja2 Unit Test file must be a python file ending in .py!\n"
+FINAL_MSG = "{num_files} test file(s) ran."
+RUN_FAILED = "ERROR: Failed to run {path}.\n{e}\n"
+NO_TEST_FILE_FOUND = "ERROR: No jinja unit test file found in {path}\n"

@@ -1,0 +1,15 @@
+{% macro template_macro(template_value1, template_value2) %}
+    {
+        "key1": "{{ template_value1 }}",
+        "key2": "{{ template_value2 }}"
+    }
+
+{%endmacro%}
+
+{% macro macro_str(template_value1) %}
+    {{ template_value1 }}
+{%endmacro%}
+
+{% macro _some_private_macro(template_value1) %}
+    {{ template_value1 }}
+{%endmacro%}

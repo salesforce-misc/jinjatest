@@ -1,0 +1,11 @@
+.eggs
+.pytest_cache
+build
+j2test.egg-info
+venv
+.DS_Store
+*.pyc
+.python-version
+license_checker.py
+.idea
+*__pycache__*

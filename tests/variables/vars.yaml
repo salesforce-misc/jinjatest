@@ -1,0 +1,7 @@
+std:
+  app:
+    team: teamname
+    dir_name: dirname
+    instance: instance1
+    app_name: applicationname
+

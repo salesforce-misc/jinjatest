@@ -1,0 +1,18 @@
+# Base
+Jinja2==3.0.3
+termcolor
+deepdiff
+pyyaml
+jsonmerge
+jsonpath
+ruamel.yaml
+python-rapidjson
+
+# Compile
+wheel
+twine
+setuptools
+
+# Tests
+pytest
+pytest-runner
