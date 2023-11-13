@@ -87,7 +87,7 @@ j2test
 - Beware of jinja requirements as well. For example, private macros, macros that start with `_`, cannot be tested as it's not accessible. So make macros public if you wish to test them.
 
 
-## Test Directory Structure
+### Test Directory Structure
 j2test supports 3 common test directory structures. Like in pytest, j2test will automatically match the j2test test file with the jinja file using the name of the test file.
 
 1. Test file and Jinja template at the same level
