@@ -1,17 +1,16 @@
-# j2Test: Jinja2 Unit Test Framework
+# J2Test: Jinja2 Unit Test Framework
 
 ## Table of Contents
 - Background
 - Installation
 - Usage
-- Conventions
 - Contribute
 - License
 
 ## Background
-The `j2Test` framework makes it easy to write unit tests for Jinja2 macros in a simple and scalable manner. It provides powerful features such as macro rendering, macro output assertions, custom Jinja filters, and a CLI tool for test automation.
+The `J2Test` framework makes it easy to write unit tests for Jinja2 macros in a simple and scalable manner. It provides powerful features such as macro rendering, macro output assertions, custom Jinja filters, and a CLI tool for test automation.
 
-`j2Test` was developed to be able to build robust unit tests for Jinja macros by eliminating the overhead of importing, running, and testing Jinja macros.
+`J2Test` was developed to be able to build robust unit tests for Jinja macros by eliminating the overhead of importing, running, and testing Jinja macros.
 
 
 ## Installation
@@ -77,7 +76,7 @@ j2test jtest_<JINJA_FILENAME>.py
 j2test
 ```
 
-## Conventions
+### Conventions
 - All test files must follow `jtest_<JINJA_FILENAME>.py`
 - All unit test functions must start with `test` or `test_`
 - All unit test function names must be unique
@@ -85,6 +84,8 @@ j2test
 - The jinja import base directory is set to the parent directory in which the `j2tests` folder is in or if there is no `j2tests` folder, it is wherever the j2test file is located. This is important if you have imports within your jinja file.
 - File paths specified in the test file, such as JSON/YAML files, must be specified relative to the test file. j2test will automatically convert relative file paths for you!
 - This framework uses a class structure instead of functions at the file level. (for ease of use as users will be using far more functions from the package than in the Python unit testing framework [pytest](https://github.com/pytest-dev/pytest/) and also introduces more structure.
+- Beware of jinja requirements as well. For example, private macros, macros that start with `_`, cannot be tested as it's not accessible. So make macros public if you wish to test them.
+
 
 ## Test Directory Structure
 j2test supports 3 common test directory structures. Like in pytest, j2test will automatically match the j2test test file with the jinja file using the name of the test file.
