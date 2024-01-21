@@ -5,5 +5,6 @@
 # These owners will be the default owners for everything in the repo.
 # Unless a later match takes precedence, these users will be requested
 # for review when someone opens a pull request.
+#GUSINFO:fire-bot,fire-bot
 * @Zman-Programmer @abhishekwaichal
 #ECCN:Open Source 5D002
